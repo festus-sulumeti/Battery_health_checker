@@ -200,6 +200,70 @@ body {
   background: var(--gradient-color-green);
 }
 
+/*=============== BATTERY INFO ===============*/
+.battery-info {
+  margin: 2rem 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.battery-info__card {
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.battery-info__card h2 {
+  margin-bottom: 0.5rem;
+  font-size: var(--normal-font-size);
+}
+
+.battery-info__health,
+.battery-info__temperature,
+.battery-info__source {
+  font-size: var(--biggest-font-size);
+}
+
+/*=============== BATTERY RECOMMENDATIONS ===============*/
+.battery-recommendations {
+  margin: 2rem 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.battery-recommendations__card {
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.battery-recommendations__card h2 {
+  margin-bottom: 0.5rem;
+  font-size: var(--normal-font-size);
+}
+
+.battery-recommendations__list {
+  list-style: none;
+  padding: 0;
+}
+
+.battery-recommendations__list li {
+  margin-bottom: 0.5rem;
+  font-size: var(--normal-font-size);
+}
+
+/*=============== FOOTER ===============*/
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--container-color);
+  color: var(--text-color);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px) {
