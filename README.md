@@ -23,7 +23,7 @@ Battery Health Checker is a web application that provides detailed information a
     ```sh
     cd battery-level-indicator
     ```
-3. Install the dependencies:
+3. Install the dependencies (requires Node.js >= v22.13.0 (for the lower versions `< v22.13.0` it may or may not work)):
     ```sh
     npm install
     ```
