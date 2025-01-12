@@ -23,6 +23,8 @@ Battery Health Checker is a web application that provides detailed information a
 6. Right-click on `index.html` and select "Open with Live Server".
 7. Your default web browser will open and display the application at `http://127.0.0.1:5500` or another available port.
 
+
+
 ## Usage
 - The main interface displays the current battery percentage and status.
 - Additional sections provide detailed information about battery health, temperature, and power source.
