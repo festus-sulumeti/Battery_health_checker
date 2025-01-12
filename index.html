@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Battery percentage</title>
+    <title>Battery Health Checker</title>
 
       <!--=============== REMIXICONS ===============-->
       <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -34,6 +34,40 @@
             </div>
         </div>
     </section>
+
+    <!-- New section for additional battery information -->
+    <section class="battery-info">
+        <div class="battery-info__card">
+            <h2>Battery Health</h2>
+            <p class="battery-info__health">Good</p>
+        </div>
+        <div class="battery-info__card">
+            <h2>Battery Temperature</h2>
+            <p class="battery-info__temperature">30°C</p>
+        </div>
+        <div class="battery-info__card">
+            <h2>Power Source</h2>
+            <p class="battery-info__source">AC Power</p>
+        </div>
+    </section>
+
+    <!-- New section for battery recommendations -->
+    <section class="battery-recommendations">
+        <div class="battery-recommendations__card">
+            <h2>Recommendations</h2>
+            <ul class="battery-recommendations__list">
+                <li>Keep your battery between 20% and 80% for optimal health.</li>
+                <li>Avoid exposing your device to extreme temperatures.</li>
+                <li>Use the original charger to ensure proper charging.</li>
+                <li>Unplug your device once it is fully charged.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footer">
+        <p>&copy; 2023 Battery Health Checker. All rights reserved.</p>
+    </footer>
 
     <script src="./js/index.js"></script>
 </body>
