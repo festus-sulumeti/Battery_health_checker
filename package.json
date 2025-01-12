@@ -6,10 +6,8 @@
   "scripts": {
     "test": "xdg-open test/SpecRunner.html || open test/SpecRunner.html || start test/SpecRunner.html"
   },
-  "dependencies": {
-   
-  },
   "devDependencies": {
-    "jasmine": "^3.6.0"
+    "jasmine": "^3.99.0",
+    "puppeteer": "^19.11.1"
   }
 }
