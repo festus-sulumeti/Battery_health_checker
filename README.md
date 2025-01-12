@@ -49,5 +49,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - Icons by [Remixicon](https://remixicon.com/).
 - Inspired by various battery health monitoring tools.
 
+
+
 ## Contact
 For any inquiries, please contact [yourname@example.com](mailto:mails@me.com).
