@@ -1,0 +1,44 @@
+/* Battery level animation */
+@keyframes batteryLevel {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 36px; /* Adjust this value based on the actual battery level */
+  }
+}
+
+.battery__liquid {
+  animation: batteryLevel 2s ease-in-out forwards;
+}
+
+/* Battery health card animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.battery-info__card,
+.battery-recommendations__card {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Battery percentage animation */
+@keyframes percentageChange {
+  0% {
+    color: var(--text-color);
+  }
+  100% {
+    color: var(--gradient-color-green);
+  }
+}
+
+.battery__percentage {
+  animation: percentageChange 2s ease-in-out forwards;
+}
