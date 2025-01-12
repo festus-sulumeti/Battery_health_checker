@@ -17,10 +17,11 @@ Battery Health Checker is a web application that provides detailed information a
     ```bash
     cd BatteryHealthChecker
     ```
-3. Open the project in Visual Studio Code.
-4. Install the Live Server extension if you haven't already.
-5. Right-click on `index.html` and select "Open with Live Server".
-6. Your default web browser will open and display the application at `http://127.0.0.1:5500` or another available port.
+3. Add your logo image to the `images` directory and name it `logo.png`.
+4. Open the project in Visual Studio Code.
+5. Install the Live Server extension if you haven't already.
+6. Right-click on `index.html` and select "Open with Live Server".
+7. Your default web browser will open and display the application at `http://127.0.0.1:5500` or another available port.
 
 ## Usage
 - The main interface displays the current battery percentage and status.
