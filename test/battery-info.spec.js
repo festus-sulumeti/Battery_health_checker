@@ -8,7 +8,8 @@ describe('Battery Info', () => {
       addEventListener: jasmine.createSpy('addEventListener')
     };
 
-    spyOn(navigator, 'getBattery').and.returnValue(Promise.resolve(batteryMock));
+    // Mock navigator.getBattery method
+    navigator.getBattery = jasmine.createSpy('getBattery').and.returnValue(Promise.resolve(batteryMock));
 
     document.body.innerHTML = `
       <div class="battery-info__health"></div>
