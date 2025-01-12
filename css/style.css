@@ -253,6 +253,57 @@ body {
   font-size: var(--normal-font-size);
 }
 
+/*=============== FEATURES ===============*/
+.features {
+  margin: 2rem 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.features__card {
+  background-color: var(--container-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features__card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.features__card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.features__list {
+  list-style: none;
+  padding: 0;
+}
+
+.features__list li {
+  margin-bottom: 0.75rem;
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  line-height: 1.5;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.features__list li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: var(--gradient-color-green);
+  font-size: 1rem;
+}
+
 /*=============== FOOTER ===============*/
 .footer {
   text-align: center;
