@@ -26,10 +26,12 @@ function initBattery(){
                 /* Battery is fully charged */
                 batteryStatus.innerHTML = `Full battery <i class="ri-battery-2-fill green-color"></i>`
                 batteryLiquid.style.height = '103%' /* Slightly overflow to hide the ellipse */
+                showNotification('Battery fully charged')
             }
             else if(level <= 20 && !batt.charging){ 
                 /* Battery is low and not charging */
                 batteryStatus.innerHTML = `Low battery <i class="ri-plug-line animated-red"></i>`
+                showNotification('Low battery')
             }
             else if(batt.charging){ 
                 /* Battery is currently charging */
@@ -69,3 +71,26 @@ function initBattery(){
         batt.addEventListener('levelchange', () => {updateBattery()})
     })
 }
+
+/*=============== NOTIFICATIONS ===============*/
+function showNotification(message) {
+    if (Notification.permission === 'granted') {
+        new Notification(message)
+    } else if (Notification.permission !== 'denied') {
+        Notification.requestPermission().then(permission => {
+            if (permission === 'granted') {
+                new Notification(message)
+            }
+        })
+    }
+}
+
+navigator.getBattery().then((batt) => {
+    batt.addEventListener('levelchange', () => {
+        if (batt.level * 100 <= 20 && !batt.charging) {
+            showNotification('Low battery')
+        } else if (batt.level * 100 == 100) {
+            showNotification('Battery fully charged')
+        }
+    })
+})
