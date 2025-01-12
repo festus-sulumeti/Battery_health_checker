@@ -7,7 +7,7 @@
     "test": "open test/SpecRunner.html"
   },
   "dependencies": {
-    // ...existing dependencies...
+   
   },
   "devDependencies": {
     "jasmine": "^3.6.0"
