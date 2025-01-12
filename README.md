@@ -1,51 +1,97 @@
 # Battery Health Checker
 
-## Overview
+# Overview
+
 Battery Health Checker is a web application that provides detailed information about your device's battery health, temperature, power source, and offers recommendations for maintaining optimal battery performance.
 
 ## Features
-- Display current battery percentage and status.
-- Show additional battery information such as health, temperature, and power source.
-- Provide recommendations for maintaining battery health.
+
+- Real-time battery level monitoring
+- Battery health status
+- Battery temperature display
+- Power source detection
+- Battery usage history tracking
+- Battery maintenance recommendations
 
 ## Installation
+
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/BatteryHealthChecker.git
+    git clone https://github.com/festus-sulumeti/Battery_health_checker.git
     ```
 2. Navigate to the project directory:
-    ```bash
-    cd BatteryHealthChecker
-    ```
-3. Add your logo image to the `images` directory and name it `logo.png`.
-4. Open the project in Visual Studio Code.
-5. Install the Live Server extension if you haven't already.
-6. Right-click on `index.html` and select "Open with Live Server".
-7. Your default web browser will open and display the application at `http://127.0.0.1:5500` or another available port.
-
-
-
-## Usage
-- The main interface displays the current battery percentage and status.
-- Additional sections provide detailed information about battery health, temperature, and power source.
-- Recommendations are provided to help maintain optimal battery health.
-
-## Contributing
-Contributions are welcome! Please follow these steps:
-1. Fork the repository.
-2. Create a new branch:
     ```sh
-    git checkout -b feature/your-feature-name
+    cd battery-level-indicator
     ```
-3. Make your changes and commit them:
+3. Install the dependencies:
     ```sh
-    git commit -m "Add your commit message"
+    npm install
     ```
-4. Push to the branch:
+
+## Running the Application
+
+To run the application, open the `index.html` file in your preferred web browser.
+
+## Running Tests
+
+This project uses Jasmine for testing. The tests are located in the `test` directory.
+
+### Running Tests in the Browser
+
+1. Open the `test/SpecRunner.html` file in your preferred web browser to run the tests.
+
+### Running Tests using npm
+
+1. Run the following command to open the `SpecRunner.html` file in your default browser:
     ```sh
-    git push origin feature/your-feature-name
+    npm run test
     ```
-5. Open a pull request.
+
+## Tests
+
+The tests cover the following functionality:
+
+- **Battery Health**: Ensures that the battery health is updated correctly based on the battery level.
+- **Battery Temperature**: Ensures that the battery temperature is simulated and updated correctly.
+- **Power Source**: Ensures that the power source is updated correctly based on the charging status.
+- **Recommendations**: Ensures that recommendations are generated correctly based on the battery health, temperature, and power source.
+
+### Example Test
+
+Here is an example test that checks if the battery health is updated correctly:
+
+```javascript
+describe('Battery Info', () => {
+  let batteryMock;
+
+  beforeEach(() => {
+    batteryMock = {
+      level: 0.5,
+      charging: false,
+      addEventListener: jasmine.createSpy('addEventListener')
+    };
+
+    spyOn(navigator, 'getBattery').and.returnValue(Promise.resolve(batteryMock));
+
+    document.body.innerHTML = `
+      <div class="battery-info__health"></div>
+      <div class="battery-info__temperature"></div>
+      <div class="battery-info__source"></div>
+      <ul class="battery-recommendations__list"></ul>
+    `;
+
+    require('../js/battery-info.js');
+  });
+
+  it('should update battery health', (done) => {
+    navigator.getBattery().then(() => {
+      const batteryHealthElement = document.querySelector('.battery-info__health');
+      expect(batteryHealthElement.textContent).toBe('Fair');
+      done();
+    });
+  });
+});
+```
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
