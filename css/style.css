@@ -225,6 +225,13 @@ body {
   font-size: var(--biggest-font-size);
 }
 
+/* Responsive layout for larger devices */
+@media screen and (min-width: 768px) {
+  .battery-info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /*=============== BATTERY RECOMMENDATIONS ===============*/
 .battery-recommendations {
   margin: 2rem 1.5rem;
