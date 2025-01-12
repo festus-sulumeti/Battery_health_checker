@@ -52,4 +52,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 
 ## Contact
-For any inquiries, please contact [yourname@example.com](mailto:mails@me.com).
+For any inquiries, please contact [mail@me.com](mailto:mails@me.com).
