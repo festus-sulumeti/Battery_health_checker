@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     batteryTemperatureElement.textContent = `${batteryTemperature}°C`;
     powerSourceElement.textContent = powerSource;
 
-    generateRecommendations(batteryHealth, batteryTemperature, powerSource);
+    generateRecommendations(batteryHealth, batteryTemperature, powerSource, battery.level);
   }
 
   function simulateBatteryTemperature(batteryLevel) {
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return Math.round(temperature);
   }
 
-  function generateRecommendations(batteryHealth, batteryTemperature, powerSource) {
+  function generateRecommendations(batteryHealth, batteryTemperature, powerSource, batteryLevel) {
     const recommendations = [];
 
     if (batteryHealth === 'Poor') {
@@ -61,7 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (powerSource === 'AC Power') {
       recommendations.push('Unplug your device once it is fully charged.');
     } else {
-      recommendations.push('Consider charging your device soon.');
+      if (batteryLevel < 0.15) {
+        recommendations.push('Consider charging your device soon.');
+      } else {
+        recommendations.push('Your battery level is sufficient.');
+      }
     }
 
     recommendationsListElement.innerHTML = recommendations.map(rec => `<li>${rec}</li>`).join('');
