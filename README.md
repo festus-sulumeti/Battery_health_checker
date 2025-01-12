@@ -14,16 +14,18 @@ Battery Health Checker is a web application that provides detailed information a
     git clone https://github.com/yourusername/BatteryHealthChecker.git
     ```
 2. Navigate to the project directory:
-```bash
+    ```bash
     cd BatteryHealthChecker
- ```
-3. Open `index.html` in your preferred web browser.
+    ```
+3. Open the project in Visual Studio Code.
+4. Install the Live Server extension if you haven't already.
+5. Right-click on `index.html` and select "Open with Live Server".
+6. Your default web browser will open and display the application at `http://127.0.0.1:5500` or another available port.
 
 ## Usage
 - The main interface displays the current battery percentage and status.
 - Additional sections provide detailed information about battery health, temperature, and power source.
 - Recommendations are provided to help maintain optimal battery health.
-
 
 ## Contributing
 Contributions are welcome! Please follow these steps:
@@ -48,8 +50,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Acknowledgements
 - Icons by [Remixicon](https://remixicon.com/).
 - Inspired by various battery health monitoring tools.
-
-
 
 ## Contact
 For any inquiries, please contact [mail@me.com](mailto:mails@me.com).
