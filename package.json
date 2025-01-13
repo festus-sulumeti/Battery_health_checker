@@ -4,10 +4,13 @@
   "description": "Battery Level Indicator",
   "main": "index.js",
   "scripts": {
-    "test": "xdg-open test/SpecRunner.html || open test/SpecRunner.html || start test/SpecRunner.html"
+    "test": "node test/run-tests.js"
+  },
+  "dependencies": {
+   
   },
   "devDependencies": {
-    "jasmine": "^3.99.0",
-    "puppeteer": "^19.11.1"
+    "jasmine": "^3.6.0",
+    "puppeteer": "^22.8.2"
   }
 }
