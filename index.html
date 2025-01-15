@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Battery Health Checker</title>
     <link rel="icon" href="./image/bat.jpeg" type="image/png">
-    <link rel="manifest" href="manifest.json">
 
     <!--=============== REMIXICONS ===============-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -13,7 +12,6 @@
 
     <!-- Stylesheet start -->
     <link rel="stylesheet" href="./css/style.css">
-    
     <!-- Stylesheet end -->
 </head>
 <body>
@@ -93,16 +91,5 @@
     <script src="./js/index.js"></script>
     <script src="./js/battery-info.js"></script>
     <script src="js/notification.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js')
-                .then(registration => {
-                    console.log('Service Worker registered with scope:', registration.scope);
-                })
-                .catch(error => {
-                    console.log('Service Worker registration failed:', error);
-                });
-        }
-    </script>
 </body>
 </html>
